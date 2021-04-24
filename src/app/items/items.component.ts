@@ -16,6 +16,7 @@ export class ItemsComponent implements OnInit {
     owningUserId: number,
     name: string,
     askingPrice: string,
+    underNegotiation: string,
     seller: string,
     nicheMarket: string,
     tags: string,
