@@ -7,6 +7,8 @@ import { ItemsService } from '../items.service';
   styleUrls: ["./homepage.component.css"]
 })
 export class HomepageComponent implements OnInit {
+  searchString: string = "";
+
   constructor( private itemService: ItemsService) {}
 
   itemsList: any = [];

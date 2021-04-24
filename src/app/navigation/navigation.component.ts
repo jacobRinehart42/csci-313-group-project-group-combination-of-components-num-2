@@ -8,6 +8,8 @@ import { AccountService } from "../account.service";
   styleUrls: ["./navigation.component.css"]
 })
 export class NavigationComponent implements OnInit {
+  //searchString: string = "";
+
   constructor(
     public acctService: AccountService,
     public routService: RoutingService

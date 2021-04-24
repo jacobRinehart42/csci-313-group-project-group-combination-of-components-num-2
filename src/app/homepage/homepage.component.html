@@ -1,6 +1,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
 <body>
+
+  <div class="search-input">
+      <li><input type="text" placeholder="Search" [(ngModel)] = "searchString"/></li>
+      <div class="autocom-box">
+        <li>Place Holder</li>
+        <li>Place Holder</li>
+        <li>Place Holder</li>
+      </div>
+    </div>
+
   <div class="container">
     <h2 class="header-section"><span>Top Picks From Us</span></h2>
     <div class="itemImages">
@@ -9,7 +19,7 @@
         <div class="icon"><img src="https://wiki.tripwireinteractive.com/images/4/47/Placeholder.png"alt=""></div>
         <div class="icon"><img src="https://wiki.tripwireinteractive.com/images/4/47/Placeholder.png"alt=""></div> -->
         <!-- <div *ngFor="for item of itemsList"> a </div> -->
-        <div *ngFor="let item of this.itemsList"> <app-items [item]="item"></app-items> </div>
+        <div *ngFor="let item of this.itemsList" > <app-items *ngIf="item.name.includes(searchString)" [item]="item"></app-items> </div>
       </div>
     </div>
   </div>

@@ -18,10 +18,11 @@ import { ItemsComponent } from './items/items.component';
 import { ItemComponent } from './item/item.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ItemPipe } from './item.pipe';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, CreateAccountComponent, LoginComponent, SignedInUserInfoComponent, CreateItemComponent, PasswordComponent, MyItemsComponent, EditItemComponent, ItemsComponent, ItemComponent, NavigationComponent, HomepageComponent ],
+  declarations: [ AppComponent, HelloComponent, CreateAccountComponent, LoginComponent, SignedInUserInfoComponent, CreateItemComponent, PasswordComponent, MyItemsComponent, EditItemComponent, ItemsComponent, ItemComponent, NavigationComponent, HomepageComponent, ItemPipe ],
   bootstrap:    [ AppComponent ],
   providers: [AccountService, RoutingService, ItemsService]
 })
