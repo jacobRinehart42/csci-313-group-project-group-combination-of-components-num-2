@@ -1,4 +1,3 @@
-
 body {
   font-family: Arial, sans-serif;
   min-height: 50vh;
@@ -103,4 +102,33 @@ img {
     transform: scale(1.35);
     opacity: 35%;
   }
+}
+
+.search-input {
+  background: whitesmoke;
+  list-style: none;
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.1);
+}
+.search-input input {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 100vh;
+  padding: 0 1px 0 18px;
+  font-size: 18px;
+
+  box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.2);
+}
+.search-input .autocom-box {
+  padding: 5px 10px 20px;
+  max-height: 280px;
+  overflow-y: auto;
+  opacity: 55%;
+  /* pointer-events: none; */
+}
+.search-input .autocom-box:hover {
+  opacity: 100%;
 }
