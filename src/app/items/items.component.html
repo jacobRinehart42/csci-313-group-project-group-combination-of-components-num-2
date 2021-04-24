@@ -27,7 +27,11 @@
           <hr />
 
           <div>
-            <button class="editButton btn btn-primary" type="button" >Contact User!</button>
+            <strong><em>Seller Name:</em></strong>  {{ item.seller}}
+            <br>
+            <strong><em>Phone Number:</em></strong>  {{ its.getOwnerInfo(item.itemId).phoneNumber }}
+            <br>
+            <strong><em>Email:</em></strong>  {{ its.getOwnerInfo(item.itemId).email }}
           </div>
     
         </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RoutingService } from '../routing.service';
+import { ItemsService } from "../items.service";
 
 @Component({
   selector: 'app-items',
@@ -25,7 +26,7 @@ export class ItemsComponent implements OnInit {
 
     @Input() id: number;
 
-  constructor(private route: RoutingService) { }
+  constructor(private route: RoutingService, public its: ItemsService) { }
 
   ngOnInit() {
   }
