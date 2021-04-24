@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ItemsService } from '../items.service';
 
 @Component({
   selector: "app-homepage",
@@ -6,7 +7,9 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./homepage.component.css"]
 })
 export class HomepageComponent implements OnInit {
-  constructor() {}
+  constructor( private itemService: ItemsService) {}
 
-  ngOnInit() {}
+  itemsList: any = [];
+
+  ngOnInit() { this.itemsList = this.itemService.items ; }
 }
