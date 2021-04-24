@@ -1,0 +1,120 @@
+<h1>Edit Listing</h1>
+
+<br>
+
+<div class="center">
+  <label>PICTURES IF I FIGURE THEM OUT</label>
+</div>
+
+<br>
+
+<div class="row">
+
+  <div class="col try">
+
+    <p class="important">Item Name: *</p>
+
+    <p> Tags: </p>
+
+    <p class="important">Niche Market: *</p>
+
+    <p class="important">Item Description: *</p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <p>Dimensions: </p>
+
+    <p class="important">Condition: *</p>
+
+    <p class="important">Asking Price: *</p>
+
+    <p>Other Information: </p>
+
+  </div>
+
+  <div class="col test">
+
+    <input type="text" placeholder="Pokemon Cards" value="{{this.currentItem.name}}" #name>
+
+    <br>
+    <br>
+
+    <input type="text" placeholder="#pokemon #cards"  value="{{this.currentItem.tags}}" #tags>
+
+    <br>
+    <br>
+
+    <!-- This is the commented out function load() in TS -->
+    <form id="myForm">
+      <select id="selectCat" value="{{this.currentItem.nicheMarket}}" #nicheMarket>
+    <option>Select a Category</option>
+    <option>Art</option>
+    <option>Cards</option>
+    <option>Cars</option>
+    <option>Music</option>
+    <option>Movies</option>
+    <option>Toys</option>
+  </select>
+    </form>
+
+    <br>
+
+    <textarea rows="5" cols="50" name="text" placeholder="It's a one of a kind first edition base set booster pack with 10 cards."
+    value="{{this.currentItem.description}}"  #description></textarea>
+
+    <br>
+    <br>
+
+    <input type="text" placeholder="LxWxH" value="{{this.currentItem.dimensions}}" #dimensions>
+
+    <br>
+    <br>
+
+    <form id="myForm">
+      <select id="selectCare" value="{{this.currentItem.conditionAndAge}}" #conditionAndAge>
+    <option>Choose a Quality</option>
+    <option>Very Poor</option>
+    <option>Poor</option>
+    <option>Alright</option>
+    <option>Almost New</option>
+    <option>Brand Spanking New</option>
+  </select>
+    </form>
+
+    <br>
+
+    <input type="text" placeholder="$0.00" value="{{this.currentItem.askingPrice}}" #askingPrice>
+
+    <br>
+    <br>
+
+    <textarea rows="5" cols="50" name="text" placeholder="This booster pack is not bent and has been taken care of, unlike some heathens."
+    value="{{this.currentItem.otherInfo}}" #otherInfo></textarea>
+
+  </div>
+
+</div>
+
+<br>
+
+<div class="center">
+  <label>Being Negotiated: {{this.currentItem.underNegotiation}}</label>
+</div>
+
+<br>
+
+<div class="center">
+
+  <button type="button" class="btn btn-primary back" (click)="switchToMyItems()" >Go Back!</button>
+
+  <button type="button" class="btn btn-primary back" (click)="save(name.value, askingPrice.value ,  nicheMarket.value, tags.value, description.value, dimensions.value, conditionAndAge.value, otherInfo.value)">Save!</button>
+
+  <button type="button" class="btn btn-primary" (click) = "underNegotiation()">Toggle Being Negotiated</button>
+
+  <br>
+  <br>
+
+</div>
